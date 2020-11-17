@@ -8,7 +8,12 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <Label x:Name="Lbl_Title" Text="Iniciar sesión" FontSize="55" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+            <Label x:Name="Lbl_Username" Text="Nombre de usuario"/>
+            <Entry x:Name="Entry_Username"/>
+            <Label x:Name="Lbl_Password" Text="Contraseña"/>
+            <Entry x:Name="Entry_Password"/>
+            <Button x:Name="Btn_Login" VerticalOptions="Center" Text="Ingresar" Command="{Binding LoginCommand}" Clicked="LoginProcedure"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -15,7 +15,12 @@ namespace AppDroid.Views
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+        }
+
+        void LoginProcedure(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
