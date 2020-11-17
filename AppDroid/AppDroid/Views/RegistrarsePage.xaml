@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDroid.Views.RegistrarsePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Lbl_Titulo" Text="Registro AppDroid" FontSize="40" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+            
+            <Label x:Name="Lbl_Nombre" Text="Nombre" FontSize="18" Margin="10,0,0,-5" FontAttributes="Bold"/>
+            <Entry x:Name="TxtNombre" Margin="10,0,0,0"/>
+
+            <Label x:Name="Lbl_Email" Text="Correo electronico" FontSize="18" Margin="10,20,0,-5" FontAttributes="Bold"/>
+            <Entry x:Name="Txtemail" Margin="10,0,0,0"/>
+
+            <Label x:Name="Lbl_Pass" Text="Contraseña" FontSize="18" Margin="10,20,0,-5" FontAttributes="Bold"/>
+            <Entry x:Name="TxtPass" IsPassword="True" Margin="10,0,0,0"/>
+
+            <Label x:Name="Lbl_ConfirmPass" Text="Confirmar contraseña" FontSize="18" Margin="10,20,0,-5" FontAttributes="Bold"/>
+            <Entry x:Name="TxtConfirmPass" IsPassword="True" Margin="10,0,0,0"/>
+            
+            <Switch x:Name="SwVerPass" IsToggled="False" Toggled="SwVerPass_T"/>
+
+            <Button x:Name="BtnGuardar" VerticalOptions="EndAndExpand" Text="Registrarse" Visual="Material" Clicked="BtnRegistrarse_Click" Margin="5,0,5,0" HorizontalOptions="Fill" TextTransform="None" FontSize="16"/>
+            <Button x:Name="BtnCancelarRegistro" Text="Cancelar" Visual="Material" Clicked="BtnCancelar_Click" Margin="5,0,5,15" HorizontalOptions="Fill" TextTransform="None" FontSize="16"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

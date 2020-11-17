@@ -7,13 +7,27 @@
              x:Class="AppDroid.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Label x:Name="Lbl_Title" Text="Iniciar sesión" FontSize="55" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
-            <Label x:Name="Lbl_Username" Text="Nombre de usuario"/>
-            <Entry x:Name="Entry_Username"/>
-            <Label x:Name="Lbl_Password" Text="Contraseña"/>
-            <Entry x:Name="Entry_Password"/>
-            <Button x:Name="Btn_Login" VerticalOptions="Center" Text="Ingresar" Command="{Binding LoginCommand}" Clicked="LoginProcedure"/>
+        <StackLayout VerticalOptions="FillAndExpand" Visual="Material" IsTabStop="False" HorizontalOptions="FillAndExpand">
+            <Grid Padding="0,20,0,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <StackLayout Padding="10,0,10,0" VerticalOptions="Center" Grid.Row="1">
+                <Label x:Name="Lbl_Titulo" Text="AppDroid" FontSize="55" VerticalOptions="FillAndExpand" Margin="0,0,0,30" HorizontalTextAlignment="Center"/>
+                <Label x:Name="Lbl_Email" Text="Correo electronico" Margin="0,0,0,20"/>
+                <Entry x:Name="Entry_Email" Margin="0,-20,0,20"/>
+                <Label x:Name="Lbl_Password" Text="Contraseña"/>
+                <Entry x:Name="Entry_Password" IsPassword="true"/>
+                <Switch x:Name="SwVerPassword" IsToggled="False" Toggled="SwVerPassword_Activado" Visual="Material"></Switch>
+            </StackLayout>
+
+            <Button x:Name="BtnIngreso" Text="Iniciar Sesion" Clicked="BtnInicioSesion_Click" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" Margin="5,0,5,0" TextTransform="None" FontSize="16" BackgroundColor="DodgerBlue"/>
+            <Button x:Name="BtnRegistrarse" Text="Registrarse" Clicked="BtnRegistrarse_Click" HorizontalOptions="Fill" Margin="5,0,5,15" TextTransform="None" FontSize="16" BackgroundColor="ForestGreen"/>
         </StackLayout>
+
+
     </ContentPage.Content>
 </ContentPage>
