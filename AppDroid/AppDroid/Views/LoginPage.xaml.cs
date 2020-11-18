@@ -12,9 +12,12 @@ namespace AppDroid.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        LoginViewModel vm;
+
         public LoginPage()
         {
             InitializeComponent();
+            BindingContext = vm = new LoginViewModel();
         }
 
         void LoginProcedure(object sender, EventArgs e)
@@ -33,9 +36,9 @@ namespace AppDroid.Views
             }
         }
 
-        private void BtnInicioSesion_Click(object sender, EventArgs e)
+        private async void BtnInicioSesion_Click(object sender, EventArgs e)
         {
-
+            //TODO
         }
 
         private async void BtnRegistrarse_Click(object sender, EventArgs e)

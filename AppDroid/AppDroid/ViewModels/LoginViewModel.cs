@@ -2,23 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AppDroid.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
+        public Models.Usuario MiUsuario { get; set; }
 
         public LoginViewModel()
         {
-            LoginCommand = new Command(OnLoginClicked);
+            MiUsuario = new Models.Usuario();
         }
 
-        private async void OnLoginClicked(object obj)
+        public async Task<bool> IniciarSesion(string email, string password)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            //TODO
         }
     }
 }
