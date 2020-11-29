@@ -22,7 +22,6 @@
 
             <Button x:Name="BtnModificar" VerticalOptions="EndAndExpand" Text="Modificar" Visual="Material" Clicked="BtnModificar_Click" Margin="5,0,5,0" HorizontalOptions="Fill" TextTransform="None" FontSize="16"/>
             <Button x:Name="BtnCancelar" Text="Cancelar" Visual="Material" Clicked="BtnCancelar_Click" Margin="5,0,5,15" HorizontalOptions="Fill" TextTransform="None" FontSize="16"/>
-            <Button x:Name="BtnEliminarCuenta" Text="Eliminar Cuenta" Visual="Material" Clicked="BtnEliminarCuenta_Click" Margin="5,0,5,15" HorizontalOptions="Fill" TextTransform="None" FontSize="16" BackgroundColor="#c72318"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

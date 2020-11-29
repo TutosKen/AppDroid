@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AppDroid.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ModificarUsuarioPage : ContentPage
+    public partial class PerfilPage : ContentPage
     {
-        public ModificarUsuarioPage()
+        public PerfilPage()
         {
             InitializeComponent();
         }
@@ -22,17 +22,7 @@ namespace AppDroid.Views
 
         }
 
-        private async void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
         private void BtnEliminarCuenta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SwVerPass_T(object sender, ToggledEventArgs e)
         {
 
         }

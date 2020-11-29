@@ -16,9 +16,9 @@ namespace AppDroid.ViewModels
             MiUsuario = new Models.Usuario();
         }
 
-        public async Task<bool> IniciarSesion(string email, string password)
-        {
+        //public async Task<bool> IniciarSesion(string email, string password)
+        //{
             //TODO
-        }
+        //}
     }
 }

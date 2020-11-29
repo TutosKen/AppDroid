@@ -62,9 +62,9 @@ namespace AppDroid.Models
             return R;
         }
 
-        public async Task<bool> IniciarSesion()
-        {
+        //public async Task<bool> IniciarSesion()
+        //{
             //TODO
-        }
+        //}
     }
 }

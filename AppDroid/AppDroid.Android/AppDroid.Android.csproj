@@ -94,6 +94,9 @@
       <Name>AppDroid</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\default.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
