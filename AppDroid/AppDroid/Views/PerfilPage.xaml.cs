@@ -17,9 +17,9 @@ namespace AppDroid.Views
             InitializeComponent();
         }
 
-        private void BtnModificar_Click(object sender, EventArgs e)
+        private async void BtnModificar_Click(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ModificarUsuarioPage());
         }
 
         private void BtnEliminarCuenta_Click(object sender, EventArgs e)
