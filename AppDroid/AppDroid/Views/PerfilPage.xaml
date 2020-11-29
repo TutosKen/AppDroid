@@ -4,7 +4,7 @@
              x:Class="AppDroid.Views.PerfilPage">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,5">
-            <Image Source="default.jpg" Aspect="Fill" HeightRequest="250"/>
+            <Image Source="imagenDefault.jpg" Aspect="Fill" HeightRequest="250"/>
             <Label x:Name="UserName" Text="NombreUsuario" HorizontalOptions="Center" FontSize="20" Margin="0,10,0,50"/>
             <Button x:Name="BtnModificar" Text="Modificar Datos" Visual="Material" Clicked="BtnModificar_Click" Margin="5,0,5,5" HorizontalOptions="Fill" TextTransform="None" FontSize="16"/>
             <Button x:Name="BtnEliminarCuenta" Text="Eliminar Cuenta" Visual="Material" Clicked="BtnEliminarCuenta_Click" Margin="5,0,5,15" HorizontalOptions="Fill" TextTransform="None" FontSize="16" BackgroundColor="#c72318"/>
