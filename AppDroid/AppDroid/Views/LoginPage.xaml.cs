@@ -38,7 +38,16 @@ namespace AppDroid.Views
 
         private async void BtnInicioSesion_Click(object sender, EventArgs e)
         {
-            //TODO
+            bool R = await vm.IniciarSesion(Entry_Email.Text.Trim(), Entry_Password.Text.Trim());
+
+            if (R)
+            {
+                await Navigation.PushAsync(new PrincipalPage());
+            }
+            else
+            {
+                await DisplayAlert("Error", "Datos incorrectos", "OK");
+            }
         }
 
         private async void BtnRegistrarse_Click(object sender, EventArgs e)

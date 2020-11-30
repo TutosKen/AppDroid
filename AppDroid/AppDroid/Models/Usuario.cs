@@ -62,9 +62,31 @@ namespace AppDroid.Models
             return R;
         }
 
-        //public async Task<bool> IniciarSesion()
-        //{
-            //TODO
-        //}
+        public async Task<bool> IniciarSesion()
+        {
+            string direccion = String.Format("Usuarios/{0}/{1}", this.Email, this.Password);
+
+            string Ruta = ObjetosGlobales.RutaAPIStag + direccion;
+
+            var Cliente = new RestClient(Ruta);
+
+            var Request = new RestRequest(Method.GET);
+
+            Request.AddHeader(ObjetosGlobales.KeyName, ObjetosGlobales.KeyValue);
+            Request.AddHeader("Content-Type", "application/json");
+
+            IRestResponse Respuesta = await Cliente.ExecuteAsync(Request);
+
+            HttpStatusCode CodigoRet = Respuesta.StatusCode;
+
+            bool R = false;
+
+            if (CodigoRet == HttpStatusCode.OK)
+            {
+                R = true;
+            }
+
+            return R;
+        }
     }
 }
