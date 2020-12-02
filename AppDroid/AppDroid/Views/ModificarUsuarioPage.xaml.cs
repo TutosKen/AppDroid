@@ -15,6 +15,10 @@ namespace AppDroid.Views
         public ModificarUsuarioPage()
         {
             InitializeComponent();
+            TxtNombre.Text = ObjetosGlobales.NombreSesion;
+            Txtemail.Text = ObjetosGlobales.UsuarioSesion;
+            TxtPass.Text = ObjetosGlobales.PasswordSesion;
+            TxtConfirmPass.Text = ObjetosGlobales.PasswordSesion;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -34,7 +38,14 @@ namespace AppDroid.Views
 
         private void SwVerPass_T(object sender, ToggledEventArgs e)
         {
+            TxtPass.IsPassword = true;
+            TxtConfirmPass.IsPassword = true;
 
+            if (SwVerPass.IsToggled)
+            {
+                TxtPass.IsPassword = false;
+                TxtConfirmPass.IsPassword = false;
+            }
         }
     }
 }

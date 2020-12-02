@@ -2,12 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppDroid.Views.PrincipalPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="NmbUsuario" Text="Usuario" Clicked="BtnPerfil"/>
+
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
+            <!--
+            <Grid>
+                <Button Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Text="Usuario" 
+                        Margin="10,10,10,10" TextTransform="None" />
+            </Grid>-->
+
+            <BoxView HeightRequest="1" BackgroundColor="Black"/>
+
+            <Frame BorderColor="Black" Margin="10,0,10,0">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="imagenDefault.jpg" HorizontalOptions="Start" WidthRequest="100" HeightRequest="70" Margin="-20,-10,-10,-10"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Aqui va la descripcion de la app depende del largo son mas lineas" HorizontalOptions="Start" TextColor="Black"/>
+                </Grid>
+            </Frame>
+
+            <Frame BorderColor="Black" Margin="10,0,10,0">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="imagenDefault.jpg" HorizontalOptions="Start" WidthRequest="100" HeightRequest="70" Margin="-20,-10,-10,-10"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Aqui va la descripcion de la app depende del largo son mas lineas" HorizontalOptions="Start" TextColor="Black"/>
+                </Grid>
+            </Frame>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

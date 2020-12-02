@@ -15,6 +15,13 @@ namespace AppDroid.Views
         public PrincipalPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
+            NmbUsuario.Text = ObjetosGlobales.NombreSesion;
+        }
+
+        private async void BtnPerfil(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PerfilPage()); 
         }
     }
 }

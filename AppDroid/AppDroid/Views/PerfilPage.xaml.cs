@@ -15,6 +15,7 @@ namespace AppDroid.Views
         public PerfilPage()
         {
             InitializeComponent();
+            UserName.Text = ObjetosGlobales.UsuarioSesion;
         }
 
         private async void BtnModificar_Click(object sender, EventArgs e)

@@ -20,5 +20,10 @@ namespace AppDroid.Views
 
             
         }
+
+        private void BtnDescargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

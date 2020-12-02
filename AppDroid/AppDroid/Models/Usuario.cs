@@ -17,6 +17,9 @@ namespace AppDroid.Models
         public string Password { get; set; }
         public int Idtipo { get; set; }
 
+        public object idtipoNavigation { get; set; }
+
+
         public Usuario()
         {
 
@@ -83,6 +86,11 @@ namespace AppDroid.Models
 
             if (CodigoRet == HttpStatusCode.OK)
             {
+                Usuario usr = new Usuario();
+                usr = JsonConvert.DeserializeObject<Usuario>(Respuesta.Content);
+                ObjetosGlobales.NombreSesion = usr.Nombre;
+                ObjetosGlobales.UsuarioSesion = this.Email;
+                ObjetosGlobales.PasswordSesion = this.Password;
                 R = true;
             }
 
