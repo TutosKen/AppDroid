@@ -37,6 +37,7 @@
                     </Grid.RowDefinitions>
 
                     <Image Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Source="imagenDefault.jpg" HorizontalOptions="Start" WidthRequest="100" HeightRequest="70" Margin="-10,-10,-10,-10"/>
+                    <Label Text="IDApp" IsVisible="False"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Nombre de la App" HorizontalOptions="Start" TextColor="Black"/>
                     <Label Grid.Row="1" Grid.Column="1" Text="Aqui va la descripcion de la app depende del largo son mas lineas" HorizontalOptions="Start" TextColor="Black"/>
                 </Grid>

@@ -7,6 +7,7 @@ namespace AppDroid
     public static class ObjetosGlobales
     {
 
+        //Variables de sesion
         public static string NombreSesion;
         public static string UsuarioSesion;
         public static string PasswordSesion;
