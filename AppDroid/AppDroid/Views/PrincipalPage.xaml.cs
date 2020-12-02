@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,34 @@ namespace AppDroid.Views
             {
                 Navigation.RemovePage(Navigation.NavigationStack[i]);
             }
+        }
+
+        private void App_Click(object sender, EventArgs e)
+        {
+
+            //Debug.WriteLine("tapFrame");
+            Frame f = (Frame)sender;
+            var hijos = f.Children;
+
+            foreach (var hijo in hijos)
+            {
+                if (hijo.GetType() == typeof(Grid))
+                {
+                    Grid celdas = (Grid)hijo;
+                    var hijosGrid = celdas.Children;
+
+                    foreach (var hijoG in hijosGrid)
+                    {
+                        if (hijoG.GetType() == typeof(Label))
+                        {
+                            Label lbl = (Label)hijoG;
+                            Debug.WriteLine(lbl.Text);
+                            break;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
