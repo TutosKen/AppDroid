@@ -4,7 +4,9 @@
              x:Class="AppDroid.Views.PrincipalPage">
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="NmbUsuario" Text="Usuario" Clicked="BtnPerfil"/>
+        <ToolbarItem Order="Primary" x:Name="NmbUsuario" Text="Usuario"/>
+        <ToolbarItem Order="Secondary" Clicked="BtnPerfil" Text="Opciones"/>
+        <ToolbarItem Order="Secondary" Clicked="CerrarSesion_Click" Text="Cerrar sesion"/>
 
     </ContentPage.ToolbarItems>
     

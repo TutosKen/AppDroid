@@ -23,5 +23,17 @@ namespace AppDroid.Views
         {
             await Navigation.PushAsync(new PerfilPage()); 
         }
+
+        private void CerrarSesion_Click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+
+            var stackNav = Navigation.NavigationStack.ToList();
+
+            for (int i = 0; i < stackNav.Count - 1; i++)
+            {
+                Navigation.RemovePage(Navigation.NavigationStack[i]);
+            }
+        }
     }
 }

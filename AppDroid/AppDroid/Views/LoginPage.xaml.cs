@@ -17,6 +17,7 @@ namespace AppDroid.Views
         public LoginPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
             BindingContext = vm = new LoginViewModel();
         }
 
