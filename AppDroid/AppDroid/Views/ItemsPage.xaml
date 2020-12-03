@@ -5,7 +5,8 @@
              Title="{Binding Title}"
              xmlns:local="clr-namespace:AppDroid.ViewModels"  
              xmlns:model="clr-namespace:AppDroid.Models"  
-             x:Name="BrowseItemsPage">
+             x:Name="BrowseItemsPage"
+             BackgroundImageSource="bg.png">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />

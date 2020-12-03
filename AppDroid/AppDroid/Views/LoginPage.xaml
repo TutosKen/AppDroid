@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppDroid.Views.LoginPage"
+             BackgroundImageSource="bg.png"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" Visual="Material" IsTabStop="False" HorizontalOptions="FillAndExpand">
