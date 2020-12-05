@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDroid.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,11 +14,21 @@ namespace AppDroid.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PrincipalPage : ContentPage
     {
+
+        //        public List<Models.Usuario> usuarios = new List<Models.Usuario>(); //probando listview
+        PrincipalViewModel vm;
         public PrincipalPage()
         {
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             NmbUsuario.Text = ObjetosGlobales.NombreSesion;
+            BindingContext = vm = new PrincipalViewModel();
+            CargarApps();
+        }
+
+        private async void CargarApps()
+        {
+            this.testView.ItemsSource = await vm.ObtenerApps();
         }
 
         private async void BtnPerfil(object sender, EventArgs e)
@@ -29,40 +40,24 @@ namespace AppDroid.Views
         {
             Navigation.PushAsync(new LoginPage());
 
-            var stackNav = Navigation.NavigationStack.ToList();
+            //var stackNav = Navigation.NavigationStack.ToList();
 
-            for (int i = 0; i < stackNav.Count - 1; i++)
-            {
-                Navigation.RemovePage(Navigation.NavigationStack[i]);
-            }
+            //for (int i = 0; i < stackNav.Count - 1; i++)
+            //{
+            //    Navigation.RemovePage(Navigation.NavigationStack[i]);
+            //}
         }
 
-        private void App_Click(object sender, EventArgs e)
+        private void App_Click(object sender, ItemTappedEventArgs e)
         {
+            var item = e.Item as Models.Aplicacion;
+            ObjetosGlobales.NombreApp = item.Nombre;
+            ObjetosGlobales.DescripcionApp = item.Descripcion;
+            ObjetosGlobales.ImagenApp = item.Imagen;
+            ObjetosGlobales.TrailerApp = item.UrlVideoTrailer;
+            ObjetosGlobales.ApkApp = item.ArchivoApk;
 
-            //Debug.WriteLine("tapFrame");
-            Frame f = (Frame)sender;
-            var hijos = f.Children;
-
-            foreach (var hijo in hijos)
-            {
-                if (hijo.GetType() == typeof(Grid))
-                {
-                    Grid celdas = (Grid)hijo;
-                    var hijosGrid = celdas.Children;
-
-                    foreach (var hijoG in hijosGrid)
-                    {
-                        if (hijoG.GetType() == typeof(Label))
-                        {
-                            Label lbl = (Label)hijoG;
-                            Debug.WriteLine(lbl.Text);
-                            break;
-                        }
-                    }
-                }
-            }
-
+            Navigation.PushAsync(new AppPage());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace AppDroid
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new NavigationPage(new PrincipalPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

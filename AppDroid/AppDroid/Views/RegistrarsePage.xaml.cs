@@ -23,7 +23,7 @@ namespace AppDroid.Views
 
         private async void BtnRegistrarse_Click(object sender, EventArgs e)
         {
-            bool R = await vm.AgregarUsuario(TxtNombre.Text, Txtemail.Text,TxtPass.Text,1);
+            bool R = await vm.AgregarUsuario(TxtNombre.Text.Trim(), Txtemail.Text.Trim(),TxtPass.Text.Trim(),1);
 
             if (R)
             {
