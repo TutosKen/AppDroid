@@ -44,5 +44,29 @@ namespace AppDroid.ViewModels
                 IsBusy = false;
             }
         }
+
+        public async Task<bool> VerificarEmail(string email)
+        {
+            if (IsBusy) return false;
+
+            IsBusy = true;
+
+            try
+            {
+                MiUsuario.Email = email;
+
+                bool R = await MiUsuario.VerificarEmail();
+
+                return R;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
     }
 }

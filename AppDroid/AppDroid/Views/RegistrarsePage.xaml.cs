@@ -20,20 +20,42 @@ namespace AppDroid.Views
             InitializeComponent();
             BindingContext = vm = new RegistrarseViewModel();
         }
+        private bool verificarContrasenna()
+        {
+            if (TxtPass.Text.Trim() == TxtConfirmPass.Text.Trim())
+            {
+                return true;
+            }
+            return false;
+        }
 
         private async void BtnRegistrarse_Click(object sender, EventArgs e)
         {
-            bool R = await vm.AgregarUsuario(TxtNombre.Text.Trim(), Txtemail.Text.Trim(),TxtPass.Text.Trim(),1);
+            if (Txtemail.Text.Trim() != "" && TxtNombre.Text.Trim() != "" && TxtPass.Text.Trim() != "" && TxtConfirmPass.Text.Trim() != "")
+            {
+                if (verificarContrasenna())
+                {
+                    if (await vm.VerificarEmail(Txtemail.Text.Trim()))
+                    {
+                        await DisplayAlert("Error", "El correo ya se encuentra en uso", "OK");
+                    }
+                    else
+                    {
+                        bool R = await vm.AgregarUsuario(TxtNombre.Text.Trim(), Txtemail.Text.Trim(), TxtPass.Text.Trim(), 1);
 
-            if (R)
-            {
-                await DisplayAlert("Aviso", "Usuario registrado correctamente", "OK");
-                await Navigation.PopAsync();
+                        if (R)
+                        {
+                            await DisplayAlert("Aviso", "Usuario registrado correctamente", "OK");
+                            await Navigation.PopAsync();
+                        }
+                        else
+                        {
+                            await DisplayAlert("Error", "Error al agregar usuario", "OK");
+                        }
+                    }
+                }
             }
-            else
-            {
-                await DisplayAlert("Error", "Error al agregar usuario", "OK");
-            }
+           
         }
 
         private async void BtnCancelar_Click(object sender, EventArgs e)
