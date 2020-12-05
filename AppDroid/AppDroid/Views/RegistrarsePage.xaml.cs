@@ -54,6 +54,14 @@ namespace AppDroid.Views
                         }
                     }
                 }
+                else
+                {
+                    await DisplayAlert("Error", "Las contraseñas no coinciden", "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Error", "Debe llenar todos los campos", "OK");
             }
            
         }
