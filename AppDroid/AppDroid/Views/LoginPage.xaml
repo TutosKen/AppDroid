@@ -17,16 +17,16 @@
             </Grid>
 
             <StackLayout Padding="10,0,10,0" VerticalOptions="Center" Grid.Row="1">
-                <Label x:Name="Lbl_Titulo" Text="AppDroid" FontSize="55" VerticalOptions="FillAndExpand" Margin="0,0,0,30" HorizontalTextAlignment="Center"/>
-                <Label x:Name="Lbl_Email" Text="Correo electronico" Margin="0,0,0,20"/>
+                <Label x:Name="Lbl_Titulo" Text=" AppDroid" FontSize="55" VerticalOptions="FillAndExpand" Margin="0,0,0,30" HorizontalTextAlignment="Center" FontFamily="{StaticResource FontAwesomeSolid}"/>
+                <Label x:Name="Lbl_Email" Text=" Correo electronico" FontFamily="{StaticResource FontAwesomeSolid}" Margin="0,0,0,20"/>
                 <Entry x:Name="Entry_Email" Margin="0,-20,0,20"/>
-                <Label x:Name="Lbl_Password" Text="Contraseña"/>
+                <Label x:Name="Lbl_Password" Text=" Contraseña" FontFamily="{StaticResource FontAwesomeSolid}"/>
                 <Entry x:Name="Entry_Password" IsPassword="true"/>
                 <Switch x:Name="SwVerPassword" IsToggled="False" Toggled="SwVerPassword_Activado" Visual="Material"></Switch>
             </StackLayout>
 
-            <Button x:Name="BtnIngreso" Text="Iniciar Sesion" Clicked="BtnInicioSesion_Click" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" Margin="5,0,5,0" TextTransform="None" FontSize="16" BackgroundColor="DodgerBlue"/>
-            <Button x:Name="BtnRegistrarse" Text="Registrarse" Clicked="BtnRegistrarse_Click" HorizontalOptions="Fill" Margin="5,0,5,15" TextTransform="None" FontSize="16" BackgroundColor="ForestGreen"/>
+            <Button x:Name="BtnIngreso" Text=" Iniciar Sesion" FontFamily="{StaticResource FontAwesomeSolid}" Clicked="BtnInicioSesion_Click" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" Margin="5,0,5,0" TextTransform="None" FontSize="16" BackgroundColor="DodgerBlue"/>
+            <Button x:Name="BtnRegistrarse" Text=" Registrarse" FontFamily="{StaticResource FontAwesomeSolid}" Clicked="BtnRegistrarse_Click" HorizontalOptions="Fill" Margin="5,0,5,15" TextTransform="None" FontSize="16" BackgroundColor="#E91E63"/>
         </StackLayout>
 
 

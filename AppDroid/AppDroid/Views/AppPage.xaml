@@ -17,7 +17,7 @@
                 <Image x:Name="ImgApp" Source="imagenDefault.jpg" Aspect="Fill" HeightRequest="150" WidthRequest="150"/>
                 <Label x:Name="Lbl_Descripcion" Text="Descripcion" FontSize="15" Margin="0,0,0,40" HorizontalTextAlignment="Center"/>
                 <WebView x:Name="Video" HeightRequest="200" WidthRequest="300"></WebView>
-                <Button x:Name="BtnDescargar" Text="Descargar" Clicked="BtnDescargar_Click" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" Margin="5,10,5,15" TextTransform="None" FontSize="16" BackgroundColor="ForestGreen"/>
+            <Button x:Name="BtnDescargar" Text=" Descargar" FontFamily="{StaticResource FontAwesomeSolid}" Clicked="BtnDescargar_Click" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" Margin="5,10,5,15" TextTransform="None" FontSize="16" BackgroundColor="#E91E63"/>
 
         </StackLayout>
     </ContentPage.Content>
